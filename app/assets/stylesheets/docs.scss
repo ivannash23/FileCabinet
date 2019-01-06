@@ -43,13 +43,11 @@
       text-align: left;
     }
   }
-}
-
-// DOCS SHOW
+} // DOCS SHOW
 #doc_show {
   .title {
     @include bold_font;
-    color: #78594b;
+    color: #529ecc;
     font-size: 2rem;
     margin-bottom: 1.25rem;
     padding-bottom: 1rem;

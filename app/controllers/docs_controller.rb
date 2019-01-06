@@ -3,7 +3,7 @@ class DocsController < ApplicationController
 
 
   def index
-    @docs = current_user.docs.order('created_at DESC')
+    @docs = Doc.where(user_id: current_user)
   end
   
   def show   

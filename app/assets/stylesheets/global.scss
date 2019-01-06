@@ -41,10 +41,12 @@ body {
 // BUTTON STYLING
 button,
 .button {
+  color: white;
+  background: #529ecc;
   border: none;
   outline: none;
-  background: $green;
   padding: 1rem 3.5rem;
+  text-align: center;
   border-radius: 0.1rem;
   a {
     color: white;
