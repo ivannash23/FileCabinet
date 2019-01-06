@@ -1,39 +1,45 @@
 // DOCS INDEX
 #docs {
   .doc {
-    background: #78594B;
+    background: linear-gradient(#529ecc, #4582a5);
     width: 90%;
     min-height: 100px;
     margin: 1rem 1%;
     padding: 1.5rem 2.5%;
     float: left;
-    border-radius: 2.9rem;
     position: relative;
     text-align: center;
+    -moz-box-shadow: inset 0 0 10px white;
+    -webkit-box-shadow: inset 0 0 10px white;
+    box-shadow: inset 0 0 10px white;
+    h2,
+    p {
+      color: white;
+    }
     .title {
       @include bold_font;
       color: white;
       margin: 0;
       left: 4.5%;
-      font-size: 2.0em;
+      font-size: 2em;
       letter-spacing: 1px;
     }
     .date {
       position: absolute;
-      bottom: .25rem;
+      bottom: 0.25rem;
       left: 5.5%;
       color: white;
       font-weight: lighter;
-      font-size: .75rem;
+      font-size: 0.75rem;
       text-align: center;
     }
     .content {
       position: absolute;
-      bottom: .25rem;
+      bottom: 0.25rem;
       left: 27.5%;
       color: $light_gray;
       font-weight: bold;
-      font-size: .75rem;
+      font-size: 0.75rem;
       text-align: left;
     }
   }
@@ -43,26 +49,26 @@
 #doc_show {
   .title {
     @include bold_font;
-    color: #78594B;
-    font-size: 2.0rem;
+    color: #78594b;
+    font-size: 2rem;
     margin-bottom: 1.25rem;
     padding-bottom: 1rem;
-    border-bottom: 1.0px solid rgba(82, 158, 204, 0.2);
+    border-bottom: 1px solid rgba(82, 158, 204, 0.2);
     text-align: center;
   }
   p {
-    font-size: 1.0rem;
+    font-size: 1rem;
     line-height: 1.75;
   }
   .buttons {
     margin-top: 3rem;
     text-align: center;
     a.button {
-      padding: .2rem 1.5rem;
+      padding: 0.2rem 1.5rem;
       border-radius: 0.1rem;
       text-decoration: none;
-      color: #529ECC;
-      border: 5px solid #529ECC;
+      color: #529ecc;
+      border: 5px solid #529ecc;
       @include bold_font;
       background: transparent;
     }
