@@ -10,14 +10,14 @@ class DocsController < ApplicationController
   end
   
   def new
-    @doc = Doc.new
+    @doc = current_user.docs.build
   end
 
   def create
-    @docs = Doc.new(doc_params)
-    if @docs.save
+    @doc = current_user.docs.build(doc_params)
+    if @doc.save
       flash[:success] = "Doc successfully created"
-      redirect_to @docs
+      redirect_to @doc
     else
       flash[:error] = "Something went wrong"
       render 'new'
