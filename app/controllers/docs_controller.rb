@@ -6,9 +6,7 @@ class DocsController < ApplicationController
     @docs = Doc.all.order('created_at DESC')
   end
   
-
-  def show
-    
+  def show   
   end
   
   def new
@@ -26,18 +24,30 @@ class DocsController < ApplicationController
     end
   end
   
-
   def edit
-    
   end
+  
 
   def update
-    
+    if @doc.update_attributes(doc_params)
+      flash[:success] = "Doc was successfully updated"
+      redirect_to @doc
+    else
+      flash[:error] = "Something went wrong"
+      render 'edit'
+    end
   end
 
   def destroy
-    
+    if @doc.destroy
+      flash[:success] = 'Doc was successfully deleted.'
+      redirect_to docs_path
+    else
+      flash[:error] = 'Something went wrong'
+      redirect_to docs_path
+    end
   end
+  
 
   private
 
